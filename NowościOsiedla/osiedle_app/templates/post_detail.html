@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="post_details">
+	<div class="post_info">
+		<h1>{{post.title}}</h1>
+		<div class="post_detail_meta">
+		<p>Autor: {{post.author}} | <a href="{% url 'post-edit' post.pk %}"> Edytuj </a> | <a href="{% url 'post-delete' post.pk%}"> Usuń</a></p>
+
+	</div>
+	</div>
+
+	<p class="post_detail_content">
+		{{post.content}}
+	</p>
+</div>
+{% endblock content %}
